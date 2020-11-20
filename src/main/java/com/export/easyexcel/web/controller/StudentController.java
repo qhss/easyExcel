@@ -81,6 +81,12 @@ public class StudentController {
         }
         return students;
     }
+
+    /**
+     * 使用模板导出
+     * @param response
+     * @throws IOException
+     */
     @ResponseBody
     @RequestMapping("/export")
     public void export(HttpServletResponse response) throws IOException {
