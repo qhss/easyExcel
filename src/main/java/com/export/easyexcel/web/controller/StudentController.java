@@ -1,6 +1,5 @@
 package com.export.easyexcel.web.controller;
 
-import cn.hutool.json.JSONObject;
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.read.builder.ExcelReaderBuilder;
@@ -8,10 +7,9 @@ import com.alibaba.excel.read.builder.ExcelReaderSheetBuilder;
 import com.alibaba.excel.write.builder.ExcelWriterBuilder;
 import com.alibaba.excel.write.builder.ExcelWriterSheetBuilder;
 import com.alibaba.excel.write.metadata.WriteSheet;
-import com.alibaba.excel.write.metadata.fill.FillConfig;
 import com.export.easyexcel.domain.HttpResult;
 import com.export.easyexcel.domain.Student;
-import com.export.easyexcel.freemarker.DateKit;
+import com.export.easyexcel.DateUtil.DateKit;
 import com.export.easyexcel.web.listener.StudentWebListenner;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -154,6 +152,7 @@ public class StudentController {
         //模板
 //        InputStream inputStream = this.getClass().getResourceAsStream("template/report_template.xlsx");
         InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream("/template/report_template.xlsx");
+
 
         response.setContentType("application/vnd.ms-excel");
         response.setCharacterEncoding("utf-8");
