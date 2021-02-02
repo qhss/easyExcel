@@ -162,7 +162,7 @@ public class StudentController {
   //      String inputStream="report_template.xlsx";
         HashMap<String, Object> map = new HashMap<String, Object>();
         map.put("date",new Date());
-        map.put("increaseCount",100);
+        map.put("increaseCount",500);
         map.put("totalCount",1000);
         map.put("increaseCountWeek",20);
         map.put("increaseCountMonth",60);
